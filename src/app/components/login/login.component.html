@@ -1,0 +1,31 @@
+<div>
+  <span>HomeBanking</span>
+  <div>
+    <mat-form-field appearance="outline" class="emailContainer">
+      <mat-label>Coloque seu Email</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="passwordContainer">
+      <mat-label>Coloque sua Senha</mat-label>
+      <input class="inputPassword" matInput [type]="hide ? 'password' : 'text'" />
+      <button
+        class="eyeButton"
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon class="eyeIcon">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
