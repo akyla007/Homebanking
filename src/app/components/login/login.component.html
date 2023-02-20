@@ -5,15 +5,23 @@
       <mat-label>Coloque seu Email</mat-label>
       <input
         matInput
+        required
         placeholder="pat@example.com"
         [formControl]="email"
-        required
+        [(ngModel)]="loginData.email"
       />
-      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+      <mat-error *ngIf="email.invalid">{{ getEmailErrorMessage() }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline" class="passwordContainer">
       <mat-label>Coloque sua Senha</mat-label>
-      <input class="inputPassword" matInput [type]="hide ? 'password' : 'text'" />
+      <input
+        class="inputPassword"
+        matInput
+        [formControl]="password"
+        [type]="hide ? 'password' : 'text'"
+        [(ngModel)]="loginData.password"
+      />
+      <mat-error>{{ getPasswordErrorMessage() }}</mat-error>
       <button
         class="eyeButton"
         mat-icon-button
@@ -27,5 +35,14 @@
         }}</mat-icon>
       </button>
     </mat-form-field>
+    <button
+      class="buttonLogin"
+      type="submit"
+      [disabled]="submitValidator()"
+      mat-raised-button
+      (click)="Submit()"
+    >
+      Enviar
+    </button>
   </div>
 </div>
