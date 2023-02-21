@@ -1,19 +1,33 @@
 <div>
   <section>
-    <span> <mat-icon>person</mat-icon>{{ getValue()}}</span>
-    <span>Saldo: <b>{{conta}}</b></span>
+    <span> <mat-icon>person</mat-icon>{{ getValue() }}</span>
+    <span>Saldo: <b>{{ conta }}</b></span>
   </section>
   <div class="contentContainer">
     <div class="inputContainer">
       <mat-form-field>
         <mat-label>Valor</mat-label>
-        <input [(ngModel)]="value" matInput placeholder="Coloque o valor."  />
-        <mat-error></mat-error>
+        <input
+          type="number"
+          [(ngModel)]="value"
+          [min]="0"
+          matInput
+          placeholder="Coloque o valor."
+        />
+        <mat-error>Valor deve ser maior que 0</mat-error>
       </mat-form-field>
-      <button class="plusIconContainer" (click)="addValue()" >
+      <button
+        [disabled]="valueVerify()"
+        class="plusIconContainer"
+        (click)="addValue()"
+      >
         <mat-icon>add</mat-icon>
       </button>
-      <button class="minusIconContainer" (click)="extractValue()"  >
+      <button
+        [disabled]="valueVerify()"
+        class="minusIconContainer"
+        (click)="extractValue()"
+      >
         <mat-icon>remove</mat-icon>
       </button>
     </div>
