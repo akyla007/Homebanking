@@ -1,0 +1,34 @@
+<div class="registerContainer">
+  <div class="credentialsContainer">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter your email</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Senha</mat-label>
+      <input [formControl]="password" matInput placeholder="Digite sua senha" />
+      <mat-icon
+        [ngClass]="{
+          matUnsatisfiedIconInput: iconColor === 'red',
+          matIconInput: iconColor === 'yellow',
+          matSatisfiedIconInput: iconColor === 'green'
+        }"
+        matSuffix
+        >{{ PasswordIcon() }}</mat-icon
+      >
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Confirme sua senha</mat-label>
+      <input [formControl]="password2" matInput />
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <button mat-flat-button [disabled]="passwordVerify()">Cadastrar</button>
+  </div>
+</div>

@@ -1,7 +1,9 @@
 <div>
   <section>
     <span> <mat-icon>person</mat-icon>{{ getValue() }}</span>
-    <span>Saldo: <b>{{ conta }}</b></span>
+    <span
+      >Saldo: <b>{{ conta }}</b></span
+    >
   </section>
   <div class="contentContainer">
     <div class="inputContainer">
@@ -14,6 +16,7 @@
           matInput
           placeholder="Coloque o valor."
         />
+        <span class="inputDolarIcon" matTextPrefix>$&nbsp;</span>
         <mat-error>Valor deve ser maior que 0</mat-error>
       </mat-form-field>
       <button

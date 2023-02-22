@@ -14,7 +14,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import { RegisterComponent } from './components/register/register.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatTableModule } from '@angular/material/table'
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
