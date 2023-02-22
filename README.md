@@ -1,27 +1,36 @@
 # Homebanking
+O sistema Homebanking trata-se de uma aplicação feita em Angular, onde tem como finalidade representar um mini sistema financeiro.
+ 
+ *Nele é permitido:*
+  **1 - Fazer Login**
+  **2 - Controle Financeciro: Adicionar, retirar e consultar extratos**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
-## Development server
+# Módulos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    MatIconModule
+    MatFormFieldModule
+    MatInputModule
+    MatButtonModule
+    MatTableModule
+    FormsModule
+    ReactiveFormsModule
+    AppRoutingModule
 
-## Code scaffolding
+**Os módulos utilizados foram do Angular Material e AppRouting do Angular**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  Onde grande maioria dos componentes foram utilizados muitas funcionalidades do Angular Material
 
-## Build
+# Componentes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  **Os componentes foram colocados no diretório src/app/components**
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    Tratam-se de quatro componentes: 
+    - footer
+    - header
+    - home
+    - login
+  
+  - footer e header, tratam-se de componentes de estilo para cabeçalho e rodapé
+  - login, representa a tela inicial de login do usuário
+  - home, representa o sistema bancário, o saldo começa como 0 e é permitido adicionar,remover e consultar os saldos numa tabela, acompanhado com a data da remoção/adição do saldo.
