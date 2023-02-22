@@ -22,13 +22,22 @@
         matSuffix
         >{{ PasswordIcon() }}</mat-icon
       >
-      <mat-hint>Hint</mat-hint>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Confirme sua senha</mat-label>
       <input [formControl]="password2" matInput />
-      <mat-hint>Hint</mat-hint>
+      <mat-hint
+        class="inputPasswordInvalid"
+        *ngIf="password2.value !== password.value"
+        >Confirmação de senha errada!</mat-hint
+      >
     </mat-form-field>
-    <button mat-flat-button [disabled]="passwordVerify()">Cadastrar</button>
+    <button
+      mat-flat-button
+      routerLink="/login"
+      [disabled]="password.value !== password2.value || email.invalid"
+    >
+      Cadastrar
+    </button>
   </div>
 </div>

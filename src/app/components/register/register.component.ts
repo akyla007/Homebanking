@@ -44,19 +44,9 @@ export class RegisterComponent {
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'Coloque um email válido';
     }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
-
-  passwordVerify(){
-    if(this.password.value === this.password2.value){
-      return false
-    }
-    else{
-      return true
-    }
+    return this.email.hasError('email') ? 'Email inválido' : '';
   }
 }
