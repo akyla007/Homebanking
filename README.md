@@ -3,7 +3,8 @@ O sistema Homebanking trata-se de uma aplicação feita em Angular, onde tem com
  
  *Nele é permitido:*
   **1 - Fazer Login**
-  **2 - Controle Financeciro: Adicionar, retirar e consultar extratos**
+  **2 - Fazer Cadastro**
+  **3 - Controle Financeciro: Adicionar, retirar e consultar extratos**
 
 
 # Módulos
