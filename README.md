@@ -19,7 +19,7 @@ O sistema Homebanking trata-se de uma aplicação feita em Angular, onde tem com
 
 **Os módulos utilizados foram do Angular Material e AppRouting do Angular**
 
-  Onde grande maioria dos componentes foram utilizados muitas funcionalidades do Angular Material
+  Onde grande maioria dos componentes foram utilizados muitas funcionalidades do Angular Material, na qual servem para facilitar a construção dos componentes da tela do usuário.
 
 # Componentes
 
