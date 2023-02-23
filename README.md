@@ -30,7 +30,9 @@ O sistema Homebanking trata-se de uma aplicação feita em Angular, onde tem com
     - header
     - home
     - login
+    - register
   
   - footer e header, tratam-se de componentes de estilo para cabeçalho e rodapé
   - login, representa a tela inicial de login do usuário
   - home, representa o sistema bancário, o saldo começa como 0 e é permitido adicionar,remover e consultar os saldos numa tabela, acompanhado com a data da remoção/adição do saldo.
+  - register, na tela de cadastro é possivel colocar email e a senha (o emote representa a segurança quanto ao tamanho da senha), onde é necessário confirmar a senha.
